@@ -110,6 +110,7 @@ header {
 		// @extend .imghvr-blur;
 		width: 46%; 
 		margin: 2%;
+		text-align: center;
 		// border: solid 1px $purple;
 
 		img {
@@ -118,7 +119,7 @@ header {
 			border-radius: 50%;
 
 			&:hover {
-				@include animation(fade .8s ease-in forwards)
+				@include animation(fade .5s ease-in forwards)
 
 			}//hover
 		}//img
@@ -176,6 +177,7 @@ footer {
 		@include span(7);
 		figure {
 			@include span(5 of 8);
+			margin-left: 20%;
 		}//figure
 	}//projects
 
@@ -185,7 +187,24 @@ footer {
 	}//.in-class & .link-to
 }
 
+@include susy-breakpoint ($small) {
+	main {
+		margin-left: 8%;
+	}
 
+	.projects {
+		@include span(12);
+		figure {
+			@include span(5 of 12);
+			font-size: 80%;
+		}//figure
+	}//projects
+
+	.in-class,
+	.link-to {
+		@include span(6);
+	}//.in-class & .link-to
+}
 
 
 
